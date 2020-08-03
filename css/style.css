@@ -1,0 +1,104 @@
+*{
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+/*******************| ANIMAÇÕES |*******************/
+
+/* ANIMAÇÃO DO FORM */
+@keyframes fade{
+	from{
+		opacity: 0;
+		transform: scale(0.9);
+	}
+	to{
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+@keyframes slide{
+	from{
+		transform: translateX(-35%);
+	}
+	to{
+		transform: translateX(0%);
+	}
+}
+/* form-hide */
+@keyframes down{
+	from{
+		transform: translateY(0%);
+	}
+	to{
+		transform: translateY(100vh);
+	}
+}
+.form-hide{
+	animation: down 500ms;
+}
+
+
+body{
+	background-color: #124;
+}
+
+form{
+	display: flex;
+	height: 350px;
+	overflow: hidden;
+	max-width: 350px;
+	margin: 100px auto;
+	border-radius: 7px;
+	align-items: center;
+	animation: fade 500ms;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #132548;
+	border: 1px solid #3a49675e;
+}
+form h1{
+	color: #fff;
+	text-align: center;
+	margin-bottom: 15px;
+	animation: fade 500ms;
+}
+
+/* inputs */
+.inputs{
+	width: 250px;
+	padding: 10px;
+	border-radius: 7px;
+	margin-bottom: 10px;
+	transition: background 1s;
+	border: 1px solid #3a4967;
+	background-color: #132548;
+}
+.inputs:hover{
+	background-color: #182e5b;
+}
+.inputs:nth-child(2){
+	animation: slide 350ms;
+}
+.inputs:nth-child(3){
+	animation: slide 450ms;
+}
+/* buttons */
+.btn{
+	color: #fff;
+	width: 250px;
+	padding: 10px;
+	cursor: pointer;
+	transition: all 1s; 
+	border-radius: 7px;
+	animation: slide 500ms;
+	background-color: #132548;
+	border: 1px solid #3a4967;
+}
+.btn:hover{
+	color: #fff;
+	background-color: #182e5b;
+}
