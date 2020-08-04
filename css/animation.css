@@ -1,0 +1,61 @@
+/*******************| ANIMAÇÕES |*******************/
+/* ANIMAÇÃO DO FORM */
+@keyframes fade{
+	from{
+		opacity: 0;
+		transform: scale(0.9);
+	}
+	to{
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+form{
+	animation: fade 0.2s;
+}
+/* ANIMAÇÃO DOs Inputs e do button */
+@keyframes slide{
+	from{
+		opacity: 0;
+		transform: translateX(-35%);
+	}
+	to{
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+form .inputs:nth-child(2){
+	animation: slide 400ms;
+}
+form .inputs:nth-child(3){
+	animation: slide 600ms;
+}
+.btn{
+	animation: slide 1000ms;
+}
+/* ANIMAÇÃO DO form quando clicar no botton */
+@keyframes down{
+	from{
+		transform: translateY(0);
+	}
+	to{
+		transform: translateY(100vh);
+	}
+}
+.form-hide{
+	animation: down 1.2s forwards;
+}
+/* ANIMAÇÃO De validação do form quando os campos não estiverem preenchidos */
+@keyframes nono{
+	0%,100%{
+		transform: translateX(0);
+	}35%{
+		transform: translateX(-15%);
+	}70%{
+		transform: translateX(15%);
+	}
+}
+.validate-error{
+	animation-iteration-count: 2;
+	animation: nono 200ms linear, fade paused;
+}
