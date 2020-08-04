@@ -1,5 +1,4 @@
 const form = document.querySelector("form");
-
 const btnLogin = document.querySelector(".btn");
 btnLogin.addEventListener("click", event => {
 	event.preventDefault();
