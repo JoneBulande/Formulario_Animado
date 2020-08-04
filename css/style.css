@@ -23,6 +23,11 @@ form{
 	background-color: #132548;
 	border: 1px solid #3a49675e;
 }
+@media (max-width: 700px){
+	form{
+		margin-top: 0px;
+	}
+}
 form h1{
 	color: #fff;
 	text-align: center;
