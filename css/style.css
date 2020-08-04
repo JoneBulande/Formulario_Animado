@@ -41,6 +41,22 @@
 	animation: down 1.2s forwards;
 	animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+/* form-nono */
+@keyframes nono{
+	0%,100%{
+		transform: translateX(0);
+	}
+	35%{
+		transform: translateX(-15%);
+	}
+	75%{
+		transform: translateX(15%);
+	}
+}
+.validate-error{
+	animation: nono 200ms, fade paused;
+	animation-iteration-count: 2;
+}
 
 
 body{
