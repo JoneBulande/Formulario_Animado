@@ -59,3 +59,31 @@ form .inputs:nth-child(3){
 	animation-iteration-count: 2;
 	animation: nono 200ms linear, fade paused;
 }
+
+/* animação dos quadrados - background*/
+@keyframes up{
+	from{
+		opacity: 0;
+		transform: translateY(0);
+	}
+	50%{
+		opacity: 1;
+	}
+	to{
+		opacity: 0;
+		transform: translateY(-900px) rotate(360deg);
+	}
+
+}
+body{
+	overflow: hidden;
+}
+.squares li{
+	width: 40px;
+	height: 40px;
+	bottom: -100px;
+	display: block;
+	position: absolute;
+	background-color: red;
+	animation: up 5s infinite alternate;
+}

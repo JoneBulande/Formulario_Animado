@@ -30,3 +30,20 @@ form.addEventListener("animationend", event => {
 		document.querySelector("body").style.overflow = "none";
 	}
 });
+
+/* squares */
+const ulSquares = document.querySelector("ul.squares");
+for (var i = 0; i < 15; i++) {
+	const li = document.createElement("li");
+	const position = Math.floor(Math.random() * 800);
+	const delay = Math.floor(Math.random() * 3);
+	const tamanho = Math.floor(Math.random() * 120);
+
+	li.style.left = `${position}px`;
+	li.style.animationDelay = `${delay}s`;
+	li.style.width = `${tamanho}px`;
+	li.style.height = `${tamanho}px`;
+
+	ulSquares.appendChild(li);
+}
+
