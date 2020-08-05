@@ -71,7 +71,7 @@ form .inputs:nth-child(3){
 	}
 	to{
 		opacity: 0;
-		transform: translateY(-900px) rotate(360deg);
+		transform: translateY(-900px) rotate(960deg);
 	}
 
 }
@@ -84,6 +84,6 @@ body{
 	bottom: -100px;
 	display: block;
 	position: absolute;
-	background-color: red;
-	animation: up 5s infinite alternate;
+	background-color: #172b514d;
+	animation: up 3s infinite alternate;
 }

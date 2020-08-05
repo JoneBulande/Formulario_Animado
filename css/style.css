@@ -24,8 +24,11 @@ form{
 	border: 1px solid #3a49675e;
 }
 @media (max-width: 700px){
+	body{
+		overflow: hidden;
+	}
 	form{
-		margin-top: 0px;
+		margin: 0 auto;
 	}
 }
 form h1{

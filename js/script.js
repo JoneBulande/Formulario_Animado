@@ -1,4 +1,6 @@
 const form = document.querySelector("form");
+const ding = document.querySelector("#ding");
+const wrong = document.querySelector("#wrong");
 const btnLogin = document.querySelector(".btn");
 btnLogin.addEventListener("click", event => {
 	event.preventDefault();
@@ -6,6 +8,7 @@ btnLogin.addEventListener("click", event => {
 	campos.forEach(campo =>{
 		if (campo.value == "") {
 			form.classList.add("validate-error");
+			setTimeout(wrong.play(), 100);
 		}
 	});
 	const formError = document.querySelector(".validate-error");
@@ -16,6 +19,7 @@ btnLogin.addEventListener("click", event => {
 			}
 		});
 	}else{
+		setTimeout(ding.play(), 100);
 		form.classList.add("form-hide");
 	}
 });
@@ -33,17 +37,27 @@ form.addEventListener("animationend", event => {
 
 /* squares */
 const ulSquares = document.querySelector("ul.squares");
-for (var i = 0; i < 15; i++) {
+for(let i = 0; i < 50; i++){
+	
 	const li = document.createElement("li");
-	const position = Math.floor(Math.random() * 800);
-	const delay = Math.floor(Math.random() * 3);
-	const tamanho = Math.floor(Math.random() * 120);
+	const random = (min, max) => Math.random() * (max - min) + min;
+	
+	const size = Math.floor(random(120, 10));
+	const position = random(1, 99);
+	const delay = random(10, 0.1);
+	const duration = random(42, 5);
+	
+	li.style.width = `${size}px`;
+	li.style.height = `${size}px`;
+	li.style.bottom = `-${size}px`;
+	
+	li.style.left = `${position}%`;
 
-	li.style.left = `${position}px`;
 	li.style.animationDelay = `${delay}s`;
-	li.style.width = `${tamanho}px`;
-	li.style.height = `${tamanho}px`;
+	li.style.animationDuration = `${duration}s`;
 
+	li.style.animationTimingFunction = `cubit-bezier(${Math.random()*1}, ${Math.random()*1}, ${Math.random()*1})`
+
+	
 	ulSquares.appendChild(li);
 }
-
