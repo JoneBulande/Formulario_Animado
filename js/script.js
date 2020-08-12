@@ -1,6 +1,4 @@
 const form = document.querySelector("form");
-const ding = document.querySelector("#ding");
-const wrong = document.querySelector("#wrong");
 const btnLogin = document.querySelector(".btn");
 btnLogin.addEventListener("click", event => {
 	event.preventDefault();
@@ -8,7 +6,6 @@ btnLogin.addEventListener("click", event => {
 	campos.forEach(campo =>{
 		if (campo.value == "") {
 			form.classList.add("validate-error");
-			setTimeout(wrong.play(), 100);
 		}
 	});
 	const formError = document.querySelector(".validate-error");
@@ -19,7 +16,6 @@ btnLogin.addEventListener("click", event => {
 			}
 		});
 	}else{
-		setTimeout(ding.play(), 100);
 		form.classList.add("form-hide");
 	}
 });
